@@ -2,12 +2,9 @@
 # Pong game OOP by neloduka_sobe
 
 # Imports
-
 import turtle
 
-
 # Classes
-
 class Logic():
     """ Responsible for harnessing all other classes together and for game logic """
     def __init__(self, player1, player2, ball):
@@ -88,12 +85,11 @@ class Logic():
             self.ball.setx(-340)
             self.ball.dx *= -1
 
-
-
     def write_score(self):
         """ Writes current score within a window """
         self.pen.clear()
         self.pen.write("Player A: {}  Player B: {}".format(self.player1.score, self.player2.score), align="center", font=("Courier", 12, "normal"))
+
 
 class Ball(turtle.Turtle):
     """ Class responsible for handling ball object """
@@ -123,7 +119,6 @@ class Ball(turtle.Turtle):
 
 class Paddle(turtle.Turtle):
     """ Responsible for handling paddles interactions """
-
     # Total number of instances of a class
     num_of_paddles = 0
 
@@ -164,10 +159,7 @@ class Paddle(turtle.Turtle):
         self.sety(y)
 
 
-# Main game loop
-
 if __name__ == "__main__":
-
     # Creating paddles, ball and game logic objects
     paddle_a = Paddle()
     paddle_b = Paddle()
@@ -175,6 +167,7 @@ if __name__ == "__main__":
     game = Logic(paddle_a, paddle_b, ball)
     game.write_score()
 
+    # Main game loop
     while True:
         game.window.update()
         ball.move()
