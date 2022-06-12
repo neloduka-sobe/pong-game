@@ -16,6 +16,6 @@ Pong based on Atari game from 1972, written in python3 using turtle graphics mod
 
 `To move down: Down Arrow`
 
-### Dependiences
+### Dependencies
  1. Python v3.x
  2. Turtle module
